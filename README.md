@@ -1,0 +1,68 @@
+# Data Leakage on Text-Attributed Graphs
+
+<img src="./pipeline.svg">
+
+## 1. Environments
+
+**`DataLeakage`** (GNN, Python 3.8)
+
+```
+conda create --name DataLeakage python=3.8 -y
+conda activate DataLeakage
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
+conda install -c pyg pytorch-sparse pytorch-scatter pytorch-cluster pyg
+pip install ogb
+conda install -c dglteam/label/cu113 dgl
+pip install yacs transformers
+pip install --upgrade accelerate
+```
+
+**`gen_emb`** (embeddings, Python 3.9, `transformers>=4.51.0`)
+
+```
+conda create -n gen_emb python=3.9 -y
+conda activate gen_emb
+pip install torch==2.8.0 transformers==4.51.0 accelerate==1.10.1 scikit-learn==1.6.1
+```
+
+## 2. Training
+
+### Embedding (`gen_emb`)
+
+One run per embedding model (E5 or Qwen). Output: `prt_lm/{dataset}/{model}_{feature}-seed{seed}.emb`.
+
+| Model | CLI |
+|-------|-----|
+| E5 | `--model e5` |
+| Qwen | `--model qwen` |
+
+```
+conda activate gen_emb
+python -m gen_emb.generate --dataset cora --text_types NS E R M RM --model e5 --seed 0 --device 0
+```
+
+| Feature | Meaning |
+|---------|---------|
+| `NS` | Original text |
+| `E` | Prediction + explanation |
+| `R` | Keyword + Interpretation |
+| `M` | Meta-Information |
+
+### GNN (`DataLeakage`)
+
+One run per feature type or combination (`_` joins types; ensemble averages logits). Backbones: `MLP`, `GCN`, `SAGE`, `RevGAT` (`lr=0.002`, `dropout=0.5`).
+
+```
+conda activate DataLeakage
+python -m core.trainEnsemble dataset cora gnn.train.feature_type NS_E gnn.model.name GCN lm.model.name intfloat/multilingual-e5-large
+```
+
+## 3. Total
+
+End-to-end via `run_*.sh` (embedding → GNN, logs in `out_{dataset}/`).
+
+```
+chmod +x run_citation.sh run_person.sh
+./run_citation.sh
+./run_person.sh
+```

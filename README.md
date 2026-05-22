@@ -67,7 +67,7 @@ conda activate DataLeakage
 python -m core.trainEnsemble dataset cora gnn.train.feature_type NS_E gnn.model.name GCN lm.model.name intfloat/multilingual-e5-large
 ```
 
-## 3. Total
+### Total
 
 End-to-end via `run_*.sh` (embedding → GNN, logs in `out_{dataset}/`).
 

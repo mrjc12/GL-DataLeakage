@@ -4,16 +4,7 @@ __pycache__/
 *.egg-info/
 .env
 .env.*
-.github_token
 *secret*
 secrets/
 prt_lm/
 out_*/
-
-# 超过 GitHub 单文件 100MB 或 LFS 免费额度；保留在本地，见 scripts/DATA_NOT_ON_GITHUB.md
-processed_data/arxiv_E.pt
-processed_data/arxiv_R.pt
-processed_data/arxiv_RM.pt
-processed_data/arxiv_fixed_sbert.pt
-gpt_response/M/arxiv_M.jsonl
-gpt_response/R/arxiv_R.jsonl

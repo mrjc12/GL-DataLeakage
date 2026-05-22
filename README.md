@@ -23,6 +23,13 @@ pip install --upgrade accelerate
 conda create -n gen_emb python=3.9 -y
 conda activate gen_emb
 pip install torch==2.8.0 transformers==4.51.0 accelerate==1.10.1 scikit-learn==1.6.1
+<!--Other Dependencies -->
+pip install torch-geometric==2.6.1
+
+pip install numpy==2.0.2
+pip install scipy==1.13.1
+pip install tqdm==4.67.1
+pip install PyYAML==6.0.3
 ```
 
 ## 2. Training

@@ -5,7 +5,7 @@
 ## 1. 登录
 
 1. 打开 https://anonymous.4open.science/
-2. 点击 **Sign in with GitHub**（用你的 GitHub 账号 lucas 登录即可）
+2. 点击 **Sign in with GitHub**（用你的 GitHub 账号 mrjc12 登录即可）
 3. 授权后进入 Dashboard
 
 > 服务只会**读取**仓库，不会修改你的 GitHub 代码。
@@ -15,11 +15,11 @@
 1. 点击 **Anonymize** / **New repository**
 2. **Repository URL** 填写（私有仓库）：
    ```
-   https://github.com/lucas/DataLeakage
+   https://github.com/mrjc12/DataLeakage
    ```
 3. **Terms to redact**（每行一个，按需增删）：
    ```
-   lucas
+   mrjc12
    secadm
    @.*\.(edu|com|cn)
    ```

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# 用法: GITHUB_TOKEN=ghp_xxx ./scripts/push_to_github.sh Lucas
+# 用法: GITHUB_TOKEN=ghp_xxx ./scripts/push_to_github.sh mrjc12
 set -euo pipefail
 
-GITHUB_USER="${1:-lucas}"
+GITHUB_USER="${1:-mrjc12}"
 REPO_NAME="${2:-DataLeakage}"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"

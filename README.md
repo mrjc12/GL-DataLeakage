@@ -27,7 +27,7 @@ pip install torch==2.8.0 transformers==4.51.0 accelerate==1.10.1 scikit-learn==1
 
 ## 2. Training
 
-### Embedding (`gen_emb`)
+### Embedding
 
 One run per embedding model (E5 or Qwen). Output: `prt_lm/{dataset}/{model}_{feature}-seed{seed}.emb`.
 
@@ -48,7 +48,7 @@ python -m gen_emb.generate --dataset cora --text_types NS E R M RM --model e5 --
 | `R` | Keyword + Interpretation |
 | `M` | Meta-Information |
 
-### GNN (`DataLeakage`)
+### GNN
 
 One run per feature type or combination (`_` joins types; ensemble averages logits). Backbones: `MLP`, `GCN`, `SAGE`, `RevGAT`.
 

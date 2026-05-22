@@ -72,7 +72,6 @@ python -m core.trainEnsemble dataset cora gnn.train.feature_type NS_E gnn.model.
 End-to-end via `run_*.sh` (embedding → GNN, logs in `out_{dataset}/`).
 
 ```
-chmod +x run_citation.sh run_person.sh
 ./run_citation.sh
 ./run_person.sh
 ```

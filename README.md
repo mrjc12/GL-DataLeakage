@@ -50,7 +50,7 @@ python -m gen_emb.generate --dataset cora --text_types NS E R M RM --model e5 --
 
 ### GNN (`DataLeakage`)
 
-One run per feature type or combination (`_` joins types; ensemble averages logits). Backbones: `MLP`, `GCN`, `SAGE`, `RevGAT` (`lr=0.002`, `dropout=0.5`).
+One run per feature type or combination (`_` joins types; ensemble averages logits). Backbones: `MLP`, `GCN`, `SAGE`, `RevGAT`.
 
 ```
 conda activate DataLeakage

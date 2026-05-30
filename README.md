@@ -1,4 +1,4 @@
-# Data Leakage on Text-Attributed Graphs
+# Rethinking Graph-LLMs: Are Performance Gains Confounded by Data Leakage?
 
 <img src="./pipeline.svg">
 

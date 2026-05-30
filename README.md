@@ -35,7 +35,10 @@ pip install tqdm==4.67.1
 pip install PyYAML==6.0.3
 ```
 
-## 2. Training
+## 2. Dataset
+OSF(https://osf.io/8xrus/files/osfstorage?view_only=abaa64ccbd6c45eaa34166d9f7f0d95a) provides access to the *.pt files. Download the dataset [here](https://files.osf.io/v1/resources/8xrus/providers/osfstorage/?view_only=abaa64ccbd6c45eaa34166d9f7f0d95a&zip=), unzip and move it to `processed_data`.
+
+## 3. Training
 
 ### Embedding
 

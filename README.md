@@ -40,7 +40,7 @@ pip install PyYAML==6.0.3
 
 ## 3. Training
 
-### Embedding
+### LM
 
 One run per embedding model (E5 or Qwen). Output: `prt_lm/{dataset}/{model}_{feature}-seed{seed}.emb`.
 

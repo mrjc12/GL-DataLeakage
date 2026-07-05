@@ -84,3 +84,21 @@ def time_logger(func):
         return ret
 
     return wrapper
+
+def parse_T_A(text: str):
+    text = text.strip()
+    text = re.sub(r"(?i)^title\s*:", "Title:", text)
+    text = re.sub(r"(?i)^abstract\s*:", "Abstract:", text)
+
+    title_match = re.search(r"Title:\s*(.*?)(?=Abstract:)", text, flags=re.S)
+    abstract_match = re.search(r"Abstract:\s*(.*)", text, flags=re.S)
+
+    title = title_match.group(1).strip() if title_match else None
+    abstract = abstract_match.group(1).strip() if abstract_match else None
+
+    if title and not title.endswith('.'):
+        title += '.'
+    if abstract and not abstract.endswith('.'):
+        abstract += '.'
+
+    return title, abstract

@@ -2,7 +2,7 @@
 
 **CIKM 2026** · Proceedings of the 35th ACM International Conference on Information and Knowledge Management
 
-**Yangchun Ye, Qin Tian, Xuan Guo, Wenjun Wang, Qiyao Peng, Tianpeng Li**
+**Yangchun Ye, Qin Tian, Xuan Guo<sup>*</sup>, Wenjun Wang, Qiyao Peng, Tianpeng Li**
 
 ## 0. Introduction
 

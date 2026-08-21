@@ -9,7 +9,7 @@
 ### SCM
 From a causal perspective, we formalize the interactions between the LLM and the graph in both LLM-as-Predictor and LLM-as-Enhancer paradigms. Here, $L_M$ and $L_R$ represent parametric memory and semantic reasoning, respectively, and are used to characterize the potential influence of parametric memory on reasoning and final predictions.
 
-<img src="./scm.svg">
+<img src="./SCM.svg">
 
 ### Overview
 This work focuses on the potential issue of data leakage in Graph-LLMs, investigating whether their performance gains may partially stem from target-correlated priors memorized during LLM pre-training rather than genuine graph reasoning ability. From a causal perspective, we develop an SCM-guided analysis framework to disentangle the effects of semantic reasoning and parametric memory through prompt interventions and entity-level anonymization, and further examine whether leakage signals can propagate and be amplified across neighboring nodes via graph message passing. Experimental results show that target-related meta-information may serve as predictive shortcuts, while model performance drops noticeably after entity anonymization, suggesting that current Graph-LLM evaluations may overestimate their true generalization ability.

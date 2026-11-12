@@ -1,3 +1,4 @@
+
 # Rethinking Graph-LLMs: Are Performance Gains Confounded by Data Leakage?
 
 **CIKM 2026** · Proceedings of the 35th ACM International Conference on Information and Knowledge Management
@@ -92,3 +93,26 @@ End-to-end via `run_*.sh` (embedding → GNN, logs in `out_{dataset}/`).
 ./run_citation.sh
 ./run_person.sh
 ```
+
+## 4. Citation
+
+If you find this work useful, please consider citing our paper:
+
+```bibtex
+@inproceedings{ye2026rethinking,
+  title     = {Rethinking Graph-LLMs: Are Performance Gains Confounded by Data Leakage?},
+  author    = {Ye, Yangchun and Tian, Qin and Guo, Xuan and Wang, Wenjun and Peng, Qiyao and Li, Tianpeng},
+  booktitle = {Proceedings of the 35th ACM International Conference on Information and Knowledge Management},
+  series    = {CIKM '26},
+  year      = {2026},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  location  = {Rome, Italy},
+  isbn      = {9798400725395},
+  numpages  = {11},
+  doi       = {10.1145/3799682.3840804},
+  url       = {https://doi.org/10.1145/3799682.3840804}
+}
+```
+
+**DOI:** [10.1145/3799682.3840804](https://doi.org/10.1145/3799682.3840804)
